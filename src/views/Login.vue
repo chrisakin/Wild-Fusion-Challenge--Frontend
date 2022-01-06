@@ -5,14 +5,16 @@
         <div class="container is-max-widescreen">
           <div class="columns is-vcentered is-narrow">
             <div data-aos="fade-up" class="column is-6">
-              
+              <div class="image">
+                  <img src="@/assets/images/queue.gif" alt="" />
+                </div>
             </div>
             <div data-aos="fade-up" class="column is-6">
               <div class="columns is-centered is-vcentered is-mobile">
                 <div class="column is-12-desktop is-12-mobile">
                     <header class="card-header">
                     <div class="card-header-title is-bold">
-                       <b-icon icon="account-circle" custom-size="default" /> Login
+                       <b-icon icon="account-circle" custom-size="default" /> Login to view Admin Dashboard
                     </div>
                    </header>
                   <div class="card">
@@ -64,6 +66,8 @@
                         </b-field>
                       </form>
                     </ValidationObserver>
+                    <br>
+                    Not Admin?  <router-link to="/users-page" style="color: green" >Click here</router-link> to go to users page
                   </div>
                   </div>
                 </div>
