@@ -106,7 +106,7 @@ export default {
                 password: this.password,
                 email: this.email
             });
-            let response = await fetch('http://localhost:8080/api/auth/login', {
+            let response = await fetch('https://eventxyx.herokuapp.com/api/auth/login', {
               method: "POST",
               headers: {
               "Content-Type": "application/json",
@@ -127,7 +127,7 @@ export default {
     },
     async getProfile () {
       try {
-        let response = await fetch('http://localhost:8080/api/auth/oneuser', {
+        let response = await fetch('https://eventxyx.herokuapp.com/api/auth/oneuser', {
           method: 'GET',
           headers: authHeader()
         })

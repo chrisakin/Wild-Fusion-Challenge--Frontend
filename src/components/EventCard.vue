@@ -371,7 +371,7 @@ export default {
     methods: {
         async getEvents () {
       try {
-        let response = await fetch('http://localhost:8080/api/event/', {
+        let response = await fetch('https://eventxyx.herokuapp.com/api/event/', {
           method: 'GET',
         })
         response = await response.json()
@@ -392,7 +392,7 @@ export default {
    async FilterBy(event){
       this.filterby = event.target.value
       try {
-        let response = await fetch(`http://localhost:8080/api/event/?filter=${this.filterby}`, {
+        let response = await fetch(`https://eventxyx.herokuapp.com/api/event/?filter=${this.filterby}`, {
           method: 'GET',
         })
         response = await response.json()
@@ -413,7 +413,7 @@ export default {
     async SortBy(event){
       this.sortby = event.target.value
     try {
-        let response = await fetch(`http://localhost:8080/api/event/?sort=${this.sortby}`, {
+        let response = await fetch(`https://eventxyx.herokuapp.com/api/event/?sort=${this.sortby}`, {
           method: 'GET',
         })
         response = await response.json()
@@ -487,7 +487,7 @@ export default {
                 eventdate: this.ifbookEventOpens.eventdate,
                 eventlocation: this.ifbookEventOpens.location
             });
-            let response = await fetch('http://localhost:8080/api/event/book', {
+            let response = await fetch('https://eventxyx.herokuapp.com/api/event/book', {
               method: "POST",
               headers: {
               "Content-Type": "application/json",
@@ -523,7 +523,7 @@ export default {
               iscancelled: body.iscancelled
             });
               
-            let response = await fetch(`http://localhost:8080/api/event/edit/${id}`, {
+            let response = await fetch(`https://eventxyx.herokuapp.com/api/event/edit/${id}`, {
               method: "PUT",
               headers: {
               "Content-Type": "application/json",
@@ -550,7 +550,7 @@ export default {
                 text: "I viewed",
                 viewId: event._id
             });
-            let response = await fetch('http://localhost:8080/api/event/view', {
+            let response = await fetch('https://eventxyx.herokuapp.com/api/event/view', {
               method: "POST",
               headers: {
               "Content-Type": "application/json",

@@ -226,7 +226,7 @@ export default {
       formData.append("eventspace", this.eventspace);
       formData.append("iscancelled", this.iscancelled);
          axios
-        .post("http://localhost:8080/api/event/", formData,{
+        .post("https://eventxyx.herokuapp.com/api/event/", formData,{
              headers: {
       'Content-Type': 'application/pdf'
     }
