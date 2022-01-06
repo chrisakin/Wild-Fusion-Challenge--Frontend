@@ -14,7 +14,7 @@
                 <div class="column is-12-desktop is-12-mobile">
                     <header class="card-header">
                     <div class="card-header-title is-bold">
-                       <b-icon icon="account-circle" custom-size="default" /> Login to view Admin Dashboard
+                       <b-icon icon="account-circle" custom-size="default" /> EVENTXYX - Login to view Admin Dashboard
                     </div>
                    </header>
                   <div class="card">
