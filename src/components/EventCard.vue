@@ -500,8 +500,7 @@ export default {
         } else {
           this.$buefy.snackbar.open({ message: `${response.message ? response.message : 'Event Booked.'}`, position: 'is-bottom-left' })
           this.bookEventModalIsOpen = false
-          this.isbookEventOpen = false
-          window.location.reload()
+          this.isbookEventOpen = false 
         }
       } catch (error) {
         this.$buefy.snackbar.open({ message: 'An error occured, try again later.', position: 'is-bottom-left' })
@@ -538,7 +537,6 @@ export default {
           this.$buefy.snackbar.open({ message: `${response.message ? response.message : 'Event Booked.'}`, position: 'is-bottom-left' })
         this.editEventModalIsOpen = false
       this.iseditEventOpen = false 
-      window.location.reload()
         }
       } catch (error) {
         this.$buefy.snackbar.open({ message: 'An error occured, try again later.', position: 'is-bottom-left' })
