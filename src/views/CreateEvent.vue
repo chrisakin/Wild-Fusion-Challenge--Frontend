@@ -235,6 +235,7 @@ export default {
         .then(res => {
           if (res.data.success === true){
              this.$buefy.snackbar.open({ message:res.data.message, position: 'is-bottom-left', duration: 5000 })
+              window.location.reload()
           }else{
               this.$buefy.snackbar.open({ message:'Something went wrong, try again.', position: 'is-bottom-left', duration: 5000 })
           }
