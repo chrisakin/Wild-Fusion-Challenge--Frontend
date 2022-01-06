@@ -1,6 +1,6 @@
 <template>
-  <section id="header" class="mainheader homepage" v-if="userName">
-    <b-navbar
+  <section id="header" class="mainheader homepage" >
+    <b-navbar v-if="userName"
       wrapper-class="container is-max-widescreen nnnbar"
       :transparent="true"
       :shadow="false"
@@ -15,6 +15,9 @@
         <b-navbar-item tag="router-link" :to="{ path: '/' }">
           Dashboard
         </b-navbar-item>
+        <b-navbar-item @click="userspage">
+          Users Page
+        </b-navbar-item>
         <b-navbar-item tag="div">
           <div class="buttons">
             <router-link to="/create-event" class="button is-black is-rounded button-color">
@@ -27,13 +30,30 @@
         </b-navbar-item>
       </template>
     </b-navbar>
+    <b-navbar v-if="!userName"
+      wrapper-class="container is-max-widescreen nnnbar"
+      :transparent="true"
+      :shadow="false"
+      :fixed-top="true"
+    >
+      <template #brand>
+        <b-navbar-item tag="router-link" :to="{ path: '/' }">
+          <h4 class="title has-text-black is-4 logo-title">EVENT-XYX </h4> 
+        </b-navbar-item>
+      </template>
+      <template #end>
+        <b-navbar-item tag="router-link" :to="{ path: '/' }">
+          Admin Page
+        </b-navbar-item>
+      </template>
+    </b-navbar>
   </section>
 </template>
 
 <style lang="scss">
 #header {
   .navbar {
-    background-color: #f1eede;
+    background-color: #bce6f8;
 
     .button.is-primary.is-outlined {
       background-color: $white;
@@ -71,7 +91,7 @@
   }
   @media (max-width: 1023px) {
     .navbar-menu {
-      background-color: #f8f8f8;
+      background-color: #a3d8f0;
       text-align: center;
       .navbar-item .buttons {
         text-align: center;
@@ -96,7 +116,14 @@
 export default {
   data () {
     return {
-      userName: sessionStorage.getItem('name')
+      userName: sessionStorage.getItem('token')
+    }
+  },
+  methods: {
+    userspage (){
+      sessionStorage.clear()
+        this.$router.push("users-page") 
+        window.location.reload()
     }
   }
 }

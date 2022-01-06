@@ -23,7 +23,7 @@ const routes = [
       {
         meta: {
           title: 'User Page',
-          hideNavbar: true
+         
         },
         path: '/users-page',
         name: 'UsersPage',

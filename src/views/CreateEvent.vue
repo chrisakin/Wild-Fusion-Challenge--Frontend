@@ -208,6 +208,7 @@ export default {
       eventtype: "",
       eventprice: "",
       eventspace: "",
+      iscancelled: false,
        file: {},
       isLoading: false,
     }
@@ -223,6 +224,7 @@ export default {
       formData.append("eventtype", this.eventtype);
       formData.append("eventprice", this.eventprice);
       formData.append("eventspace", this.eventspace);
+      formData.append("iscancelled", this.iscancelled);
          axios
         .post("http://localhost:8080/api/event/", formData,{
              headers: {

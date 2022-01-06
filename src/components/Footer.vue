@@ -14,7 +14,7 @@
 
 <style lang="scss" scoped>
 .bg-color{
-    background-color: #f0efe9;
+    background-color: #a3d8f0;
 }
 </style>
 
